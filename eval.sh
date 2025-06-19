@@ -17,7 +17,7 @@ python run_defect.py    \
     --model_name_or_path=Salesforce/codet5-base \
     --output_dir saved_models/  \
     --summary_dir tensorboard   \
-    --data_dir ../dataset/  \
+    --data_dir ./dataset/  \
     --cache_path saved_models/cache_data \
     --res_dir saved_models/prediction \
     --res_fn saved_models/defect_codet5_base.txt   \

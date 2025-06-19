@@ -112,7 +112,8 @@ class CloneModel(nn.Module):
             vec = self.get_t5_vec(source_ids)
 
         logits = self.classifier(vec)
-        prob = nn.functional.softmax(logits)
+        #prob = nn.functional.softmax(logits)
+        prob = nn.functional.softmax(logits, dim=-1)
 
         if labels is not None:
             loss_fct = nn.CrossEntropyLoss()
@@ -175,7 +176,8 @@ class DefectModel(nn.Module):
             vec = self.get_t5_vec(source_ids)
 
         logits = self.classifier(vec)
-        prob = nn.functional.softmax(logits)
+        #prob = nn.functional.softmax(logits)
+        prob = nn.functional.softmax(logits, dim=-1)
 
         if labels is not None:
             loss_fct = nn.CrossEntropyLoss()
